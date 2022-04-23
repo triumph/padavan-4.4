@@ -35,7 +35,8 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
   - EA7500(from https://github.com/MNM28/padavan-4.4, 没有机器测试，自行判断)
   - R6800(from https://github.com/MNM28/padavan-4.4, 没有机器测试，自行判断)
   - TX1801 Plus(from https://github.com/MNM28/padavan-4.4, 没有机器测试，自行判断)
-
+  - RE-CP-02(无线宝鲁班, from https://github.com/240038901/padavan-4.4, 没有机器测试，自行判断)
+  
 - Compilation step
   - Install dependencies
     ```sh
