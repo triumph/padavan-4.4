@@ -1,4 +1,4 @@
-SRC_NAME=openssl-1.1.1k
+SRC_NAME=openssl-1.1.1n
 SRC_URL=https://www.openssl.org/source/$(SRC_NAME).tar.gz
 
 # openssl use CROSS_COMPILE prefix
@@ -23,14 +23,15 @@ OPENSSL_CIPHERS = no-capieng no-cms no-rfc3779 no-seed \
   no-sm3 no-sm4 no-afalgeng no-comp
 
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_SSWAN),y)
-OPENSSL_CIPHERS += no-rc2
+OPENSSL_OPTIONS += no-rc2
 endif
 
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC),y)
-OPENSSL_CIPHERS += no-ec
+OPENSSL_OPTIONS += no-ec
 endif
 
-all: download_test extract_test config_test
+#all: download_test extract_test config_test
+all: config_test
 	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)
 
 download_test:
